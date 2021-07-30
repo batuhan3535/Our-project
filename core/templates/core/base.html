@@ -1,11 +1,5 @@
 {% load static %}
-<!--
- * CoreUI - Open Source Bootstrap Admin Template
- * @version v1.0.10
- * @link http://coreui.io
- * Copyright (c) 2018 creativeLabs Łukasz Holeczek
- * @license MIT
- -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +15,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
-  <meta name="author" content="Łukasz Holeczek">
+  <meta name="author" content="Batuhan Sakarya">
   <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,Angular 2,Angular4,Angular 4,jQuery,CSS,HTML,RWD,Dashboard,React,React.js,Vue,Vue.js">
   <meta name="google-site-verification" content="83fcqoPn-YTkXathQiicW-x3U2RWZh4PaPUzk91wtjY" />
   <title>Project System</title>
@@ -42,7 +36,7 @@
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img src="{% static 'core/img/logos/title.jpg' %}" alt="" class="brand-gui ml-2 d-none d-sm-block p-2">
+    <img src="{% static 'core/img/logos/logo.jpg' %}" alt="" class="brand-gui ml-2 d-none d-sm-block p-2">
     <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,28 +45,16 @@
       <li class="nav-item px-3">
         <a class="nav-link" href="{% url 'core:index' %}">Home</a>
       </li>
-      <li class="nav-item px-3">
-        <a class="nav-link" href="{% url 'core:dashboard' %}">Dashboard</a>
-      </li>
-      <!--<li class="nav-item px-3">-->
-        <!--<a class="nav-link" href="#">Settings</a>-->
-      <!--</li>-->
     </ul>
     <ul class="nav navbar-nav ml-auto">
       <li class="nav-item d-md-down-none">
-        <a class="nav-link" href="#"><i class="fa fa-bell"></i><span class="badge badge-pill badge-danger">{{ logged_user.received_invites.count }}</span></a>
-      </li>
-      <li class="nav-item d-md-down-none">
-        <a class="nav-link" href="#"><i class="fa fa-list"></i></a>
-      </li>
-      <li class="nav-item d-md-down-none">
-        <a class="nav-link" href="#"><i class="fa fa-map-marker"></i></a>
+        <a class="nav-link pr-5" href="#"><i class="fa fa-bell pl-5"></i><span class="badge badge-pill badge-danger">{{ logged_user.received_invites.count }}</span></a>
       </li>
       {% if user.is_authenticated %}
       <li class="text-muted">Hello, {{ user.first_name }}</li>
       {% else %}
       <li class="text-muted">
-        <a href="{% url 'core:login' %}">sign in</a>
+        <a href="{% url 'core:login' %}">Sign in</a>
       </li>
       {% endif %}
       <li class="nav-item dropdown">
@@ -88,13 +70,9 @@
             <strong>Account</strong>
           </div>
           {% if user.is_authenticated %}
-          <!--<a class="dropdown-item" href="#"><i class="fa fa-bell-o"></i> Updates<span class="badge badge-info">42</span></a>-->
           <a class="dropdown-item" href="{% url 'register:invites' %}"><i class="fa fa-envelope-o"></i> Invites<span class="badge badge-success">{{ logged_user.received_invites.count }}</span></a>
-          <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">{{ user.task_set.values.count }}</span></a>
-          <!--<a class="dropdown-item" href="#"><i class="fa fa-comments"></i> Comments<span class="badge badge-warning">42</span></a>-->
-          <div class="dropdown-header text-center">
-            <strong>Settings</strong>
-          </div>
+          <a class="dropdown-item" href="{% url 'register:user' profile_id=logged_user.id %}"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">{{ user.task_set.values.count }}</span></a>
+          
           <a class="dropdown-item" href="{% url 'register:profile' %}"><i class="fa fa-user"></i> Profile</a>
           <!--<a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>-->
           <!--<a class="dropdown-item" href="#"><i class="fa fa-usd"></i> Payments<span class="badge badge-secondary">42</span></a>-->
@@ -211,9 +189,8 @@
         <!-- Breadcrumb Menu-->
         <li class="breadcrumb-menu d-md-down-none">
           <div class="btn-group" role="group" aria-label="Button group">
-            <a class="btn" href="#"><i class="fa fa-comments"></i></a>
+
             <a class="btn" href="./"><i class="fa fa-tachometer-alt"></i> &nbsp;Dashboard</a>
-            <a class="btn" href="#"><i class="fa fa-cog"></i> &nbsp;Settings</a>
           </div>
         </li>
       </ol>
@@ -225,9 +202,6 @@
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab"><i class="fa fa-list"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><i class="fa fa-comments"></i></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="tab" href="#settings" role="tab"><i class="fa fa-cog"></i></a>
@@ -301,59 +275,7 @@
 
 
         <div class="tab-pane p-3" id="settings" role="tabpanel">
-          <h6>Settings</h6>
-
           <div class="aside-options">
-            <div class="clearfix mt-4">
-              <small><b>Option 1</b></small>
-              <label class="switch switch-text switch-pill switch-success switch-sm float-right">
-                <input type="checkbox" class="switch-input" checked="">
-                <span class="switch-label" data-on="On" data-off="Off"></span>
-                <span class="switch-handle"></span>
-              </label>
-            </div>
-            <div>
-              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
-            </div>
-          </div>
-
-          <div class="aside-options">
-            <div class="clearfix mt-3">
-              <small><b>Option 2</b></small>
-              <label class="switch switch-text switch-pill switch-success switch-sm float-right">
-                <input type="checkbox" class="switch-input">
-                <span class="switch-label" data-on="On" data-off="Off"></span>
-                <span class="switch-handle"></span>
-              </label>
-            </div>
-            <div>
-              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
-            </div>
-          </div>
-
-          <div class="aside-options">
-            <div class="clearfix mt-3">
-              <small><b>Option 3</b></small>
-              <label class="switch switch-text switch-pill switch-success switch-sm float-right">
-                <input type="checkbox" class="switch-input">
-                <span class="switch-label" data-on="On" data-off="Off"></span>
-                <span class="switch-handle"></span>
-              </label>
-            </div>
-          </div>
-
-          <div class="aside-options">
-            <div class="clearfix mt-3">
-              <small><b>Option 4</b></small>
-              <label class="switch switch-text switch-pill switch-success switch-sm float-right">
-                <input type="checkbox" class="switch-input" checked="">
-                <span class="switch-label" data-on="On" data-off="Off"></span>
-                <span class="switch-handle"></span>
-              </label>
-            </div>
-          </div>
-
-          <hr>
           <h6>System Utilization</h6>
 
           <div class="text-uppercase mb-1 mt-4">
