@@ -71,7 +71,7 @@
           </div>
           {% if user.is_authenticated %}
           <a class="dropdown-item" href="{% url 'register:invites' %}"><i class="fa fa-envelope-o"></i> Invites<span class="badge badge-success">{{ logged_user.received_invites.count }}</span></a>
-          <a class="dropdown-item" href="{% url 'register:user' profile_id=logged_user.id %}"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">{{ user.task_set.values.count }}</span></a>
+          <a class="dropdown-item" href="#"><i class="fa fa-tasks"></i> Tasks<span class="badge badge-danger">{{ user.task_set.values.count }}</span></a>
           
           <a class="dropdown-item" href="{% url 'register:profile' %}"><i class="fa fa-user"></i> Profile</a>
           <!--<a class="dropdown-item" href="#"><i class="fa fa-wrench"></i> Settings</a>-->

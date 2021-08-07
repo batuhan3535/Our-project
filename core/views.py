@@ -12,6 +12,7 @@ from register.models import Project
 from register.models import UserProfile
 from projects.models import Task
 
+
 # Create your views here.
 def index(request):
     return render(request, 'core/index.html')
@@ -84,3 +85,5 @@ def context(request): # send context to base.html
             'users_prof': users_prof,
         }
         return context
+
+
