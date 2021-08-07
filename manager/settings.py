@@ -50,6 +50,8 @@ INSTALLED_APPS = [
   
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
