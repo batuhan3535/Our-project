@@ -3650,6 +3650,7 @@ tbody.collapse.show {
 .input-group-append {
   margin-left: -1px; }
 
+
 .input-group-text {
   display: -ms-flexbox;
   display: flex;
@@ -3663,8 +3664,7 @@ tbody.collapse.show {
   color: #3e515b;
   text-align: center;
   white-space: nowrap;
-  background-color: #f0f3f5;
-  border: 1px solid #c2cfd6; }
+}
   .input-group-text input[type="radio"],
   .input-group-text input[type="checkbox"] {
     margin-top: 0; }

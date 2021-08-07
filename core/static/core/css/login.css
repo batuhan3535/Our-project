@@ -8680,7 +8680,11 @@ input[type="button"].btn-block {
   margin-left: -1px;
 }
 
-.input-group-text {
+
+
+
+
+.input-group-text{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8695,13 +8699,11 @@ input[type="button"].btn-block {
   color: #495057;
   text-align: center;
   white-space: nowrap;
-  background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  
 }
 
-.input-group-text input[type="radio"],
-.input-group-text input[type="checkbox"] {
+.input-field-logoinput[type="radio"],
+.input-field-logo input[type="checkbox"] {
   margin-top: 0;
 }
 

@@ -32,7 +32,7 @@
 {% block body %}
 <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
 
-  <header class="app-header navbar">
+  <header class="app-header navbar rounded">
     <button class="navbar-toggler mobile-sidebar-toggler d-lg-none mr-auto" type="button">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -94,7 +94,7 @@
   </header>
 
   <div class="app-body">
-    <div class="sidebar">
+    <div class="sidebar rounded">
       <nav class="sidebar-nav">
         <ul class="nav">
           <li class="nav-item">
@@ -104,7 +104,7 @@
             <a class="nav-link" href="{% url 'core:dashboard' %}"><i class="fa fa-tachometer-alt"></i> Dashboard</a>
           </li>
           <li class="nav-item nav-dropdown">
-            <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-tachometer-alt"></i> Views</a>
+            <a class="nav-link nav-dropdown-toggle" href="#"><i class="fas fa-eye"></i> Views</a>
             <ul class="nav-dropdown-items">
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'projects:projects'%}"><i class="fa fa-paper-plane ml-2"></i> Project's View</a>
@@ -114,16 +114,10 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'register:friends' %}"><i class="fa fa-users"></i> Friends</a>
+          </li>
 
-          <!--<li class="nav-title">-->
-            <!--Theme-->
-          <!--</li>-->
-          <!--<li class="nav-item">-->
-            <!--<a href="colors.html" class="nav-link"><i class="fa fa-tint"></i> Colors</a>-->
-          <!--</li>-->
-          <!--<li class="nav-item">-->
-            <!--<a href="typography.html" class="nav-link"><i class="fa fa-user"></i> Typograhy</a>-->
-          <!--</li>-->
           <li class="nav-title">
             Register
           </li>
@@ -143,17 +137,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'projects:new-task'%}"><i class="fa fa-plus ml-2"></i> New Task</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item nav-dropdown">
-            <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-user"></i> Users</a>
-            <ul class="nav-dropdown-items">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'register:new-user' %}"><i class="fa fa-user-plus ml-2"></i> Create New User</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'register:friends' %}"><i class="fa fa-users ml-2"></i> Friends</a>
               </li>
             </ul>
           </li>
@@ -180,7 +163,7 @@
     <!-- Main content -->
     <main class="main">
       <!-- Breadcrumb -->
-      <ol class="breadcrumb">
+      <ol class="breadcrumb rounded">
         {% block breadcrumb %}
         <li class="breadcrumb-item active">Home</li>
         <li class="breadcrumb-item">Dashboard</li>
