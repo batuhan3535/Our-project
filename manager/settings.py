@@ -27,7 +27,7 @@ SECRET_KEY = '!%m041&45i+ks6*fmf2$lf69+uarcv5l-25540r^rhe=fm^(yi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bms-incudemy.herokuapp.com']
 
 
 # Application definition
@@ -140,6 +140,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/' # Included upload images
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'core/media') # Included upload images
 print(MEDIA_ROOT)
+
 
 
 
