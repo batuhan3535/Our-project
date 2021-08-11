@@ -1,6 +1,5 @@
 # BUSINESS MANAGEMENT SYSTEM  
-#
-#
+
 
 The main purpose is managing business tasks daily in systematic order without confusion. The application will provide plan tasks, organize tasks, and team collaboration when you assign tasks to team members. Thus, it will increase the efficiency and quality of the work.
 
