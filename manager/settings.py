@@ -144,7 +144,7 @@ print(MEDIA_ROOT)
 if os.getcwd() == '/app':
     import dj_database_url
     DATABASES = {
-        'default': dj_database_url.config(default='postgres://localhost')
+        'default': dj_database_url.config(default='sqllite3://localhost')
     }
 
     # Honor header 'x-forwarded-proto' para request.is_secure()
