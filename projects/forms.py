@@ -107,7 +107,7 @@ class ProjectRegistrationForm(forms.ModelForm):
         self.fields['status'].widget.attrs['class'] = 'form-control'
         self.fields['status'].widget.attrs['placeholder'] = 'Status'
         self.fields['dead_line'].widget.attrs['class'] = 'form-control'
-        self.fields['dead_line'].widget.attrs['placeholder'] = 'Dead Line, type a date'
+        self.fields['dead_line'].widget.attrs['placeholder'] = 'YY-MM-DD'
         self.fields['company'].widget.attrs['class'] = 'form-control'
         self.fields['company'].widget.attrs['placeholder'] = 'Company'
         self.fields['complete_per'].widget.attrs['class'] = 'form-control'
