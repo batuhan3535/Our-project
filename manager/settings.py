@@ -27,7 +27,7 @@ SECRET_KEY = '!%m041&45i+ks6*fmf2$lf69+uarcv5l-25540r^rhe=fm^(yi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bms-incudemy.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

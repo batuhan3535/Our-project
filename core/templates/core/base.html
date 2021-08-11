@@ -19,6 +19,7 @@
   <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,AngularJS,Angular,Angular2,Angular 2,Angular4,Angular 4,jQuery,CSS,HTML,RWD,Dashboard,React,React.js,Vue,Vue.js">
   <meta name="google-site-verification" content="83fcqoPn-YTkXathQiicW-x3U2RWZh4PaPUzk91wtjY" />
   <title>Project System</title>
+  <link rel="shortcut icon" href="{% static 'core/img/logos/logo4.svg' %}">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -173,7 +174,7 @@
         <li class="breadcrumb-menu d-md-down-none">
           <div class="btn-group" role="group" aria-label="Button group">
 
-            <a class="btn" href="./"><i class="fa fa-tachometer-alt"></i> &nbsp;Dashboard</a>
+            <a class="btn" href="{% url 'core:dashboard' %}"><i class="fa fa-tachometer-alt"></i> &nbsp;Dashboard</a>
           </div>
         </li>
       </ol>
@@ -300,7 +301,7 @@
 
   <footer class="app-footer">
     <span><a href="http://incudemy.monovi.com.tr/">Copyright</a> © 2021 Incudemist Team Task Management Application.</span>
-    <!--<span class="ml-auto">Powered by <a href="http://coreui.io">CoreUI</a></span>-->
+  
   </footer>
 
   <!-- Bootstrap and necessary plugins -->
