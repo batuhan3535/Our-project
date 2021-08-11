@@ -19,7 +19,7 @@ The main purpose is managing business tasks daily in systematic order without co
 - Özge Tüfekçi(Business Analyst)
 - Yusuf Altun(Developer)
 
-# Access to app below link
+# Access to the app below link
 
 [Business Management System](https://bms-incudemy.herokuapp.com/)
 
