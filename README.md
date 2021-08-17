@@ -17,7 +17,11 @@ The main purpose is managing business tasks daily in systematic order without co
 
 - Batuhan Sakarya(Developer)
 - Özge Tüfekçi(Business Analyst)
-- Yusuf Altun(Developer)
+- Muhammed Yusuf Altun(Developer)
+
+# Access to the Mock-up below link
+
+[Business Management System Mock-up](https://drive.google.com/file/d/19sgIo98PQ9K-4jh7cwyU2QOSwSNI1vsw/view?usp=sharing)
 
 # Access to the app below link
 
